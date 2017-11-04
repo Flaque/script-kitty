@@ -10,8 +10,7 @@
     "fs-jetpack": "^1.2.0"
   },
   "scripts": {
-    "test": "jest",
-    "blah": "node .//Users/Flaque/Projects/script-kitty/foo/blah.js"
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^21.2.1",
