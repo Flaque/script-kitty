@@ -22,10 +22,8 @@ and then create an `update-scripts` command like so:
 
 ``` json
 {
-    ... // name, version, description, whatnot
     "scripts": {
         "update-scripts": "./node_modules/.bin/script-kitty scripts"
-        ... // other scripts
     }
 }
 ```
@@ -55,7 +53,6 @@ npm run fuzzbing
 It does this by editing your `package.json` like so:
 ``` json
 {
-    ... // name, version, description, whatnot
     "scripts": {
         "bloop": "./scripts/bloop.sh",
         "shmoop": "./scripts/shmoop.sh",
