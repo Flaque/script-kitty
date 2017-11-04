@@ -1,0 +1,20 @@
+{
+  "name": "script-kitty",
+  "version": "1.0.0",
+  "description": "Generate \"scripts\" attribute in your package.json",
+  "main": "index.js",
+  "author": "flaque",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "fs-jetpack": "^1.2.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "blah": "node .//Users/Flaque/Projects/script-kitty/foo/blah.js"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "tmp": "^0.0.33"
+  }
+}
