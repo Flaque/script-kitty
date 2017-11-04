@@ -15,5 +15,8 @@
   "devDependencies": {
     "jest": "^21.2.1",
     "tmp": "^0.0.33"
+  },
+  "bin": {
+    "script-kitty": "./index.js"
   }
 }
