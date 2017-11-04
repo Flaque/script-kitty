@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 const chalk = require("chalk");
 const log = console.log;
+const print = require("./lib/print");
 
 const helpString = `
 Usage: 
 
-    kitty <dir>
+    script-kitty <dir>
 
 Description:
 
@@ -24,7 +25,7 @@ Example:
         - foo.js
         - bar.sh
 
-    You can run "kitty scripts" and script-kitty
+    You can run "script-kitty scripts" and script-kitty
     will create the following commands for you:
 
     npm run foo
@@ -42,7 +43,9 @@ if (!file) {
 // Log any errors if we find them.
 try {
   const app = require("./lib/app");
-  app.update(__dirname, process.argv[2]);
+  const scripts = app.update(__dirname, process.argv[2]);
+  const names = Object.keys(scripts);
+  print.newCommandsCreated(names);
 } catch (err) {
   log(chalk.red(err.message));
 }
