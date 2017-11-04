@@ -2,9 +2,8 @@
 const chalk = require("chalk");
 const log = console.log;
 const print = require("./lib/print");
-const finder = require('find-root');
-const path = require('path')
-
+const finder = require("find-root");
+const path = require("path");
 
 const helpString = `
 Usage: 
@@ -48,13 +47,20 @@ try {
   const root = finder(process.cwd());
 
   const app = require("./lib/app");
-  const scripts = app.update(root, process.cwd() +'\\' + process.argv[2]);
+  const scripts = app.update(
+    root,
+    process.join(process.cwd(), process.argv[2])
+  );
   const names = Object.keys(scripts);
   print.newCommandsCreated(names);
 } catch (err) {
-    if(err.message == 'package.json not found in path'){
-        log(chalk.red(`script-kitty couldn't find a package.json file in your workspace 😿`));        
-    }else{
-        log(chalk.red(err.message));        
-    }
+  if (err.message == "package.json not found in path") {
+    log(
+      chalk.red(
+        `script-kitty couldn't find a package.json file in your workspace 😿`
+      )
+    );
+  } else {
+    log(chalk.red(err.message));
+  }
 }

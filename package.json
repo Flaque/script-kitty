@@ -11,8 +11,7 @@
     "fs-jetpack": "^1.2.0"
   },
   "scripts": {
-    "test": "jest",
-    "foo": "node ./foo/foo.js",
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^21.2.1",
