@@ -47,10 +47,7 @@ try {
   const root = finder(process.cwd());
 
   const app = require("./lib/app");
-  const scripts = app.update(
-    root,
-    process.join(process.cwd(), process.argv[2])
-  );
+  const scripts = app.update(root, path.join(process.cwd(), process.argv[2]));
   const names = Object.keys(scripts);
   print.newCommandsCreated(names);
 } catch (err) {
