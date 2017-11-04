@@ -1,6 +1,6 @@
 {
   "name": "script-kitty",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate \"scripts\" attribute in your package.json",
   "main": "index.js",
   "author": "flaque",
